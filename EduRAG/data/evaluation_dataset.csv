@@ -1,0 +1,1294 @@
+course,file_name,page,question_type,question,ground_truth,context
+AI Tools,Lec4 Convolution Neural Networks.pdf,2,Definition,What is a feature vector in the context of CNN?,A set of high-level features extracted by each layer of the network,"Convolution Neural Networks
+Imagine a factory production line. The raw materials are passed via conveyer
+belt, with each subsequent layer extracting a different set of high-level
+features. If the network is intended to recognize an object, the feature vector
+might includes the color, edges, textures and shapes.
+Production Line Scenario
+Defected
+…
+…
+…
+Output 
+Class labels
+Class 1
+"
+AI Tools,Lec4 Convolution Neural Networks.pdf,2,Concept,What is the purpose of each layer in a CNN production line?,To extract a different set of high-level features,"Convolution Neural Networks
+Imagine a factory production line. The raw materials are passed via conveyer
+belt, with each subsequent layer extracting a different set of high-level
+features. If the network is intended to recognize an object, the feature vector
+might includes the color, edges, textures and shapes.
+Production Line Scenario
+Defected
+…
+…
+…
+Output 
+Class labels
+Class 1
+"
+AI Tools,Lec4 Convolution Neural Networks.pdf,2,Application,What is the output of a CNN production line?,Class labels,"Convolution Neural Networks
+Imagine a factory production line. The raw materials are passed via conveyer
+belt, with each subsequent layer extracting a different set of high-level
+features. If the network is intended to recognize an object, the feature vector
+might includes the color, edges, textures and shapes.
+Production Line Scenario
+Defected
+…
+…
+…
+Output 
+Class labels
+Class 1
+"
+AI Tools,Lec4 Convolution Neural Networks.pdf,28,Definition,What is FC?,Fully Connected layers,"Convolutional Neural Networks CNN
+Why fully connected?
+Each neuron connects to every element in the flattened
+vector.
+Allows complex, non-linear combinations of high-level
+features.
+Softmax: Converts scores to probabilities that sum to 1.
+Flattening converts learned spatial 
+feature maps into a vector, then FC-
+layers combine these features non-
+linearly, ending with softmax to turn 
+raw class scores into probabilities, 
+CNN learns the entire pipeline from 
+pixels to probabilities end-to-end.
+"
+AI Tools,Lec4 Convolution Neural Networks.pdf,28,Function,What does Softmax do?,Converts scores to probabilities that sum to 1,"Convolutional Neural Networks CNN
+Why fully connected?
+Each neuron connects to every element in the flattened
+vector.
+Allows complex, non-linear combinations of high-level
+features.
+Softmax: Converts scores to probabilities that sum to 1.
+Flattening converts learned spatial 
+feature maps into a vector, then FC-
+layers combine these features non-
+linearly, ending with softmax to turn 
+raw class scores into probabilities, 
+CNN learns the entire pipeline from 
+pixels to probabilities end-to-end.
+"
+AI Tools,Lec4 Convolution Neural Networks.pdf,28,Concept,What is flattening in CNN?,Converts learned spatial feature maps into a vector,"Convolutional Neural Networks CNN
+Why fully connected?
+Each neuron connects to every element in the flattened
+vector.
+Allows complex, non-linear combinations of high-level
+features.
+Softmax: Converts scores to probabilities that sum to 1.
+Flattening converts learned spatial 
+feature maps into a vector, then FC-
+layers combine these features non-
+linearly, ending with softmax to turn 
+raw class scores into probabilities, 
+CNN learns the entire pipeline from 
+pixels to probabilities end-to-end.
+"
+AI Tools,Lec3 CV DIP Fundamentals PI II.pdf,5,Definition,What is a spatial filter?,A window with some width and height that is usually much less than that of the image.,"CNN Convolution Concept
+Convolution: It is the process of applying a filter (kernel) to an image to extract features or
+modify the image (blurring, sharpening, edge detection, etc.).
+Do we Need Padding?
+Convolution = sliding a kernel over an image, multiplying and summing at each
+position.
+The spatial filter is a window with some width and height that is usually much less than
+that of the image. Mostly 3×3, 5×5 or 7×7 size filters are used. The values in the filter are
+called coefficients or weights. There are other terms to call filters such as mask, kernel,
+template, or window. An example of spatial filter is shown above.
+"
+AI Tools,Lec3 CV DIP Fundamentals PI II.pdf,5,Definition,What are the values in the filter called?,Coefficients or weights,"CNN Convolution Concept
+Convolution: It is the process of applying a filter (kernel) to an image to extract features or
+modify the image (blurring, sharpening, edge detection, etc.).
+Do we Need Padding?
+Convolution = sliding a kernel over an image, multiplying and summing at each
+position.
+The spatial filter is a window with some width and height that is usually much less than
+that of the image. Mostly 3×3, 5×5 or 7×7 size filters are used. The values in the filter are
+called coefficients or weights. There are other terms to call filters such as mask, kernel,
+template, or window. An example of spatial filter is shown above.
+"
+AI Tools,Lec3 CV DIP Fundamentals PI II.pdf,5,Definition,What are other terms to call filters?,"Mask, kernel, template, or window","CNN Convolution Concept
+Convolution: It is the process of applying a filter (kernel) to an image to extract features or
+modify the image (blurring, sharpening, edge detection, etc.).
+Do we Need Padding?
+Convolution = sliding a kernel over an image, multiplying and summing at each
+position.
+The spatial filter is a window with some width and height that is usually much less than
+that of the image. Mostly 3×3, 5×5 or 7×7 size filters are used. The values in the filter are
+called coefficients or weights. There are other terms to call filters such as mask, kernel,
+template, or window. An example of spatial filter is shown above.
+"
+AI Tools,Lec3 CV DIP Fundamentals PI II.pdf,25,Definition,What is an image gradient?,A directional change in the intensity in an image,"An image gradient is a directional change in the intensity in
+an image. The image gradient is one of the fundamental
+building blocks in image processing.
+Image gradients have been used as a measure of image
+sharpness. The gradient at any pixel is the derivative of the
+values of neighbouring pixels.
+Generally sharper images have higher gradient values. Thus,
+any
+image
+fusion
+method
+should
+result
+in
+increased
+gradient values because this process makes the images
+sharper compared to the low resolution image.
+Sharpening is opposite to the blurring. In blurring, we reduce the edge
+content and in Sharpening, we increase the edge content.
+Intermediate Gradient
+"
+AI Tools,Lec3 CV DIP Fundamentals PI II.pdf,25,Concept,What is the relationship between image sharpness and gradient values?,Generally sharper images have higher gradient values,"An image gradient is a directional change in the intensity in
+an image. The image gradient is one of the fundamental
+building blocks in image processing.
+Image gradients have been used as a measure of image
+sharpness. The gradient at any pixel is the derivative of the
+values of neighbouring pixels.
+Generally sharper images have higher gradient values. Thus,
+any
+image
+fusion
+method
+should
+result
+in
+increased
+gradient values because this process makes the images
+sharper compared to the low resolution image.
+Sharpening is opposite to the blurring. In blurring, we reduce the edge
+content and in Sharpening, we increase the edge content.
+Intermediate Gradient
+"
+AI Tools,Lec3 CV DIP Fundamentals PI II.pdf,25,Concept,What is the effect of blurring on edge content?,We reduce the edge content,"An image gradient is a directional change in the intensity in
+an image. The image gradient is one of the fundamental
+building blocks in image processing.
+Image gradients have been used as a measure of image
+sharpness. The gradient at any pixel is the derivative of the
+values of neighbouring pixels.
+Generally sharper images have higher gradient values. Thus,
+any
+image
+fusion
+method
+should
+result
+in
+increased
+gradient values because this process makes the images
+sharper compared to the low resolution image.
+Sharpening is opposite to the blurring. In blurring, we reduce the edge
+content and in Sharpening, we increase the edge content.
+Intermediate Gradient
+"
+AI Tools,Lec7 LLM vs. GAN LMS.pdf,49,Definition,What is the Generator?,A model that creates fake data,"Teacher (Loss Function & Gradient Descent)
+Concept:
+How does the Generator learn to make good fakes? 
+It needs feedback. 
+We use our original CNN (Feature Extractor) again!
+The Twist:
+We retrain this CNN, but we change its job. Instead of 
+identifying ""Cat"" vs. ""Dog,"" 
+we train it to identify ""Real"" vs. ""Fake.“
+Result:
+This new CNN is the Discriminator. 
+It gives the Generator a ""Loss Score"" (how fake it looks).
+Analogy
+"
+AI Tools,Lec7 LLM vs. GAN LMS.pdf,49,Definition,What is the Discriminator?,A retrained CNN that identifies 'Real' vs. 'Fake' data,"Teacher (Loss Function & Gradient Descent)
+Concept:
+How does the Generator learn to make good fakes? 
+It needs feedback. 
+We use our original CNN (Feature Extractor) again!
+The Twist:
+We retrain this CNN, but we change its job. Instead of 
+identifying ""Cat"" vs. ""Dog,"" 
+we train it to identify ""Real"" vs. ""Fake.“
+Result:
+This new CNN is the Discriminator. 
+It gives the Generator a ""Loss Score"" (how fake it looks).
+Analogy
+"
+AI Tools,Lec7 LLM vs. GAN LMS.pdf,49,Concept,What is the purpose of the Loss Score?,To provide feedback to the Generator on how fake its output looks,"Teacher (Loss Function & Gradient Descent)
+Concept:
+How does the Generator learn to make good fakes? 
+It needs feedback. 
+We use our original CNN (Feature Extractor) again!
+The Twist:
+We retrain this CNN, but we change its job. Instead of 
+identifying ""Cat"" vs. ""Dog,"" 
+we train it to identify ""Real"" vs. ""Fake.“
+Result:
+This new CNN is the Discriminator. 
+It gives the Generator a ""Loss Score"" (how fake it looks).
+Analogy
+"
+AI Tools,Lec5 Naltural Language Processing.pdf,16,Definition,What is Information Extraction (IE)?,"Pull out specific, structured facts from a source","Natural Language Processing
+NLP Applications 
+1
+Information Extraction (IE)
+Text Generation
+Goal
+Pull out specific, structured facts
+from a source
+Produce coherent, fluent, natural 
+language
+Input
+Source text + schema/topic
+Prompt 
+(question, instruction, or partial text)
+Output
+Structured 
+(JSON, table, list of entities)
+Unstructured 
+(paragraphs, sentences, dialogue)
+Fidelity to source
+High 
+(extracts verbatim/literal or 
+paraphrases closely)
+Low to medium 
+(can invent, summarize, or transform 
+freely)
+LLM's role
+Acts like a reader/annotator
+Acts like a writer/speaker
+"
+AI Tools,Lec5 Naltural Language Processing.pdf,16,Function,What does a LLM do?,Acts like a reader/annotator and Acts like a writer/speaker,"Natural Language Processing
+NLP Applications 
+1
+Information Extraction (IE)
+Text Generation
+Goal
+Pull out specific, structured facts
+from a source
+Produce coherent, fluent, natural 
+language
+Input
+Source text + schema/topic
+Prompt 
+(question, instruction, or partial text)
+Output
+Structured 
+(JSON, table, list of entities)
+Unstructured 
+(paragraphs, sentences, dialogue)
+Fidelity to source
+High 
+(extracts verbatim/literal or 
+paraphrases closely)
+Low to medium 
+(can invent, summarize, or transform 
+freely)
+LLM's role
+Acts like a reader/annotator
+Acts like a writer/speaker
+"
+AI Tools,Lec5 Naltural Language Processing.pdf,16,Output,What are the two types of output in Text Generation?,Structured and Unstructured,"Natural Language Processing
+NLP Applications 
+1
+Information Extraction (IE)
+Text Generation
+Goal
+Pull out specific, structured facts
+from a source
+Produce coherent, fluent, natural 
+language
+Input
+Source text + schema/topic
+Prompt 
+(question, instruction, or partial text)
+Output
+Structured 
+(JSON, table, list of entities)
+Unstructured 
+(paragraphs, sentences, dialogue)
+Fidelity to source
+High 
+(extracts verbatim/literal or 
+paraphrases closely)
+Low to medium 
+(can invent, summarize, or transform 
+freely)
+LLM's role
+Acts like a reader/annotator
+Acts like a writer/speaker
+"
+AI Tools,Lec7 LLM vs. GAN LMS.pdf,67,Definition,What is CGAN?,Conditional GAN,"Types of GAN
+2. Conditional GAN (CGAN) 
+Conditional GAN (CGAN) adds an additional conditional parameter to guide the
+generation process. Instead of generating data randomly they allow the model to
+produce specific types of outputs. Working of CGANs:
+A conditional variable (y) is fed into both the generator and the discriminator.
+This ensures that the generator creates data corresponding to the given condition
+(e.g. generating images of specific objects).
+The discriminator also receives the labels to help distinguish between real and
+fake data.
+Example: Instead of generating any random image, CGAN can generate a specific
+object like a dog or a cat based on the label.
+3. Deep Convolutional GAN (DCGAN)
+Deep
+Convolutional
+GAN
+(DCGAN)
+are
+among the most popular types of GANs
+used for image generation.
+4. Laplacian Pyramid GAN (LAPGAN)
+Laplacian Pyramid GAN (LAPGAN), designed
+to generate ultra-high-quality images by
+using a multi-resolution approach.
+"
+AI Tools,Lec7 LLM vs. GAN LMS.pdf,67,Concept,What is the purpose of the conditional variable in CGAN?,To guide the generation process and produce specific types of outputs,"Types of GAN
+2. Conditional GAN (CGAN) 
+Conditional GAN (CGAN) adds an additional conditional parameter to guide the
+generation process. Instead of generating data randomly they allow the model to
+produce specific types of outputs. Working of CGANs:
+A conditional variable (y) is fed into both the generator and the discriminator.
+This ensures that the generator creates data corresponding to the given condition
+(e.g. generating images of specific objects).
+The discriminator also receives the labels to help distinguish between real and
+fake data.
+Example: Instead of generating any random image, CGAN can generate a specific
+object like a dog or a cat based on the label.
+3. Deep Convolutional GAN (DCGAN)
+Deep
+Convolutional
+GAN
+(DCGAN)
+are
+among the most popular types of GANs
+used for image generation.
+4. Laplacian Pyramid GAN (LAPGAN)
+Laplacian Pyramid GAN (LAPGAN), designed
+to generate ultra-high-quality images by
+using a multi-resolution approach.
+"
+AI Tools,Lec7 LLM vs. GAN LMS.pdf,67,Model,What is DCGAN?,Deep Convolutional GAN,"Types of GAN
+2. Conditional GAN (CGAN) 
+Conditional GAN (CGAN) adds an additional conditional parameter to guide the
+generation process. Instead of generating data randomly they allow the model to
+produce specific types of outputs. Working of CGANs:
+A conditional variable (y) is fed into both the generator and the discriminator.
+This ensures that the generator creates data corresponding to the given condition
+(e.g. generating images of specific objects).
+The discriminator also receives the labels to help distinguish between real and
+fake data.
+Example: Instead of generating any random image, CGAN can generate a specific
+object like a dog or a cat based on the label.
+3. Deep Convolutional GAN (DCGAN)
+Deep
+Convolutional
+GAN
+(DCGAN)
+are
+among the most popular types of GANs
+used for image generation.
+4. Laplacian Pyramid GAN (LAPGAN)
+Laplacian Pyramid GAN (LAPGAN), designed
+to generate ultra-high-quality images by
+using a multi-resolution approach.
+"
+AI Tools,Lec4 Convolution Neural Networks.pdf,10,Definition,What is a neural network?,A machine that will sort the fruit according to type based on sensor outputs,"Artificial Neural Networks ANN
+When fruit is brought to the warehouse, various types of fruit may be mixed together.
+The dealer wants a machine that will sort the fruit according to type. There is a
+conveyer belt on which the fruit is loaded. This conveyer passes through a set of
+sensors, which measure three properties of the fruit: shape, texture and weight.
+The three sensor outputs will then be input to a neural network to decide the right
+place. let’s assume that there are only two kinds of fruit on the conveyor: apples and
+oranges.
+Shape
+Circle   
+1
+Elliptical 
+-1
+Texture
+Smooth     
+1
+Rough     
+-1
+Weight
+Low > 1Pound 1
+Low < 1Pound  -1
+"
+AI Tools,Lec4 Convolution Neural Networks.pdf,10,Technical term,What are the three properties of the fruit measured by sensors?,"Shape, texture, and weight","Artificial Neural Networks ANN
+When fruit is brought to the warehouse, various types of fruit may be mixed together.
+The dealer wants a machine that will sort the fruit according to type. There is a
+conveyer belt on which the fruit is loaded. This conveyer passes through a set of
+sensors, which measure three properties of the fruit: shape, texture and weight.
+The three sensor outputs will then be input to a neural network to decide the right
+place. let’s assume that there are only two kinds of fruit on the conveyor: apples and
+oranges.
+Shape
+Circle   
+1
+Elliptical 
+-1
+Texture
+Smooth     
+1
+Rough     
+-1
+Weight
+Low > 1Pound 1
+Low < 1Pound  -1
+"
+AI Tools,Lec4 Convolution Neural Networks.pdf,10,Model,What is the type of neural network used in this scenario?,Artificial Neural Network (ANN),"Artificial Neural Networks ANN
+When fruit is brought to the warehouse, various types of fruit may be mixed together.
+The dealer wants a machine that will sort the fruit according to type. There is a
+conveyer belt on which the fruit is loaded. This conveyer passes through a set of
+sensors, which measure three properties of the fruit: shape, texture and weight.
+The three sensor outputs will then be input to a neural network to decide the right
+place. let’s assume that there are only two kinds of fruit on the conveyor: apples and
+oranges.
+Shape
+Circle   
+1
+Elliptical 
+-1
+Texture
+Smooth     
+1
+Rough     
+-1
+Weight
+Low > 1Pound 1
+Low < 1Pound  -1
+"
+AI Tools,Lec3 CV DIP Fundamentals PI II.pdf,21,Definition,What is Median filtering?,Assigns the mid value of all the gray levels in the mask to the center of mask,"
+Nonlinear spatial filters, the output is based on order of gray levels in the
+masked area (sub-image). Examples: Median filtering, Max & Min
+filtering
+Median filtering
+
+Assigns the mid value of all the gray levels in the mask to the center of
+mask;
+Particularly effective when:
+– The noise pattern consists of strong, spiky components (impulse
+noise, salt-and-pepper)
+– Edges are to be preserved, it force points with distinct gray levels to
+be more like their neighbors
+Order Statistics Filter: It is based on the ordering the pixels contained in
+the image area encompassed by the filter. It replaces the value of the
+center pixel with the value determined by the ranking result.
+Order Statistics Filters
+Extreme outliers (like random ""salt-and-pepper noise"") are completely ignored because
+the median is robust to outliers.
+"
+AI Tools,Lec3 CV DIP Fundamentals PI II.pdf,21,Concept,What is Order Statistics Filter?,It is based on the ordering the pixels contained in the image area encompassed by the filter,"
+Nonlinear spatial filters, the output is based on order of gray levels in the
+masked area (sub-image). Examples: Median filtering, Max & Min
+filtering
+Median filtering
+
+Assigns the mid value of all the gray levels in the mask to the center of
+mask;
+Particularly effective when:
+– The noise pattern consists of strong, spiky components (impulse
+noise, salt-and-pepper)
+– Edges are to be preserved, it force points with distinct gray levels to
+be more like their neighbors
+Order Statistics Filter: It is based on the ordering the pixels contained in
+the image area encompassed by the filter. It replaces the value of the
+center pixel with the value determined by the ranking result.
+Order Statistics Filters
+Extreme outliers (like random ""salt-and-pepper noise"") are completely ignored because
+the median is robust to outliers.
+"
+AI Tools,Lec3 CV DIP Fundamentals PI II.pdf,21,Application,What is the effect of Median filtering on impulse noise?,"It is particularly effective in removing strong, spiky components","
+Nonlinear spatial filters, the output is based on order of gray levels in the
+masked area (sub-image). Examples: Median filtering, Max & Min
+filtering
+Median filtering
+
+Assigns the mid value of all the gray levels in the mask to the center of
+mask;
+Particularly effective when:
+– The noise pattern consists of strong, spiky components (impulse
+noise, salt-and-pepper)
+– Edges are to be preserved, it force points with distinct gray levels to
+be more like their neighbors
+Order Statistics Filter: It is based on the ordering the pixels contained in
+the image area encompassed by the filter. It replaces the value of the
+center pixel with the value determined by the ranking result.
+Order Statistics Filters
+Extreme outliers (like random ""salt-and-pepper noise"") are completely ignored because
+the median is robust to outliers.
+"
+AI Tools,Lec1 CV DIP Fundamentals.pdf,28,Definition,What is CCD?,Charge-Coupled Device,"Use CCD for Scientific AI (Medical diagnosis) where image
+quality > speed.
+Use CMOS for Edge AI (Smartphones, Drones, Security
+cameras) where speed (FPS) & power efficiency > perfect
+quality.
+Example: A Tesla uses CMOS (high speed, lower quality)
+because driving at 100mph requires high Frame Rate, not
+perfect ISO noise levels.
+AI Engineering Trade-Off
+"
+AI Tools,Lec1 CV DIP Fundamentals.pdf,28,Application,What is CCD used for in AI?,"Scientific AI, particularly in medical diagnosis where image quality is prioritized over speed","Use CCD for Scientific AI (Medical diagnosis) where image
+quality > speed.
+Use CMOS for Edge AI (Smartphones, Drones, Security
+cameras) where speed (FPS) & power efficiency > perfect
+quality.
+Example: A Tesla uses CMOS (high speed, lower quality)
+because driving at 100mph requires high Frame Rate, not
+perfect ISO noise levels.
+AI Engineering Trade-Off
+"
+AI Tools,Lec1 CV DIP Fundamentals.pdf,28,Definition,What is CMOS?,Complementary Metal-Oxide-Semiconductor,"Use CCD for Scientific AI (Medical diagnosis) where image
+quality > speed.
+Use CMOS for Edge AI (Smartphones, Drones, Security
+cameras) where speed (FPS) & power efficiency > perfect
+quality.
+Example: A Tesla uses CMOS (high speed, lower quality)
+because driving at 100mph requires high Frame Rate, not
+perfect ISO noise levels.
+AI Engineering Trade-Off
+"
+ML,Lecture6 KNN.pdf,12,Definition,What is KNN?,K-Nearest Neighbors,"KNN Pros & Cons
+12
+KNN Pros:
+Simple to understand and implement.
+No training phase: it just stores the data. Makes it fast to ""train"" on small datasets.
+Naturally handles multi-class problems.
+KNN Cons:
+Can be slow with big datasets (must calculate distance to every training point for 
+each prediction).
+Sensitive to irrelevant features (all features are treated equally in the distance
+calculation).
+Performance depends heavily on the choice of K and the distance metric.
+"
+ML,Lecture6 KNN.pdf,12,Technical term,What does K in KNN represent?,The number of nearest neighbors,"KNN Pros & Cons
+12
+KNN Pros:
+Simple to understand and implement.
+No training phase: it just stores the data. Makes it fast to ""train"" on small datasets.
+Naturally handles multi-class problems.
+KNN Cons:
+Can be slow with big datasets (must calculate distance to every training point for 
+each prediction).
+Sensitive to irrelevant features (all features are treated equally in the distance
+calculation).
+Performance depends heavily on the choice of K and the distance metric.
+"
+ML,Lecture6 KNN.pdf,12,Concept,How does KNN handle multi-class problems?,Naturally,"KNN Pros & Cons
+12
+KNN Pros:
+Simple to understand and implement.
+No training phase: it just stores the data. Makes it fast to ""train"" on small datasets.
+Naturally handles multi-class problems.
+KNN Cons:
+Can be slow with big datasets (must calculate distance to every training point for 
+each prediction).
+Sensitive to irrelevant features (all features are treated equally in the distance
+calculation).
+Performance depends heavily on the choice of K and the distance metric.
+"
+ML,Lecture1.pdf,20,Definition,What is Super AI?,Artificial super-intelligence (ASI) that exceeds the human intellectual ability,"AI: Classification 
+AI Classification 3- Super AI
+Super AI is AI that exceeds the human intellectual ability. It’s also
+known as artificial super-intelligence (ASI).
+It’s the best at everything. Even the brightest human minds cannot come close to
+the abilities of super AI.
+University of Oxford super-intelligence is ""any intellect that greatly exceeds the
+cognitive performance of humans in virtually all domains of interest"".
+Such a level of AI is still hypothetical and remains a subject of ongoing research
+and development.
+"
+ML,Lecture1.pdf,20,Definition,What is Super-Intelligence?,Any intellect that greatly exceeds the cognitive performance of humans in virtually all domains of interest,"AI: Classification 
+AI Classification 3- Super AI
+Super AI is AI that exceeds the human intellectual ability. It’s also
+known as artificial super-intelligence (ASI).
+It’s the best at everything. Even the brightest human minds cannot come close to
+the abilities of super AI.
+University of Oxford super-intelligence is ""any intellect that greatly exceeds the
+cognitive performance of humans in virtually all domains of interest"".
+Such a level of AI is still hypothetical and remains a subject of ongoing research
+and development.
+"
+ML,Lecture1.pdf,20,Concept,What is the current status of Super AI?,Hypothetical and a subject of ongoing research and development,"AI: Classification 
+AI Classification 3- Super AI
+Super AI is AI that exceeds the human intellectual ability. It’s also
+known as artificial super-intelligence (ASI).
+It’s the best at everything. Even the brightest human minds cannot come close to
+the abilities of super AI.
+University of Oxford super-intelligence is ""any intellect that greatly exceeds the
+cognitive performance of humans in virtually all domains of interest"".
+Such a level of AI is still hypothetical and remains a subject of ongoing research
+and development.
+"
+ML,Lecture3 Introduction to ML.pdf,44,Definition,What is Supervised Learning?,A type of machine learning where the model is trained on labeled data to predict the output on the basis of prior experiences.,"Pros and Cons of Supervised Learning
+Advantages
+• The model can predict the output on the basis of prior experiences.
+• We can have an exact idea about the classes of objects.
+• Supervised learning model helps us to solve various real-world problems
+such as fraud detection, spam filtering
+Disadvantages
+• Models are not suitable for handling the complex tasks.
+• Cannot predict the correct output if the test data is different from the
+training dataset.
+• Training required lots of computation times.
+• We need enough knowledge about the classes of object.
+44
+"
+ML,Lecture3 Introduction to ML.pdf,44,Application,What are some real-world problems that Supervised Learning can solve?,Fraud detection and spam filtering,"Pros and Cons of Supervised Learning
+Advantages
+• The model can predict the output on the basis of prior experiences.
+• We can have an exact idea about the classes of objects.
+• Supervised learning model helps us to solve various real-world problems
+such as fraud detection, spam filtering
+Disadvantages
+• Models are not suitable for handling the complex tasks.
+• Cannot predict the correct output if the test data is different from the
+training dataset.
+• Training required lots of computation times.
+• We need enough knowledge about the classes of object.
+44
+"
+ML,Lecture3 Introduction to ML.pdf,44,Disadvantage,What is a limitation of Supervised Learning models?,They are not suitable for handling complex tasks,"Pros and Cons of Supervised Learning
+Advantages
+• The model can predict the output on the basis of prior experiences.
+• We can have an exact idea about the classes of objects.
+• Supervised learning model helps us to solve various real-world problems
+such as fraud detection, spam filtering
+Disadvantages
+• Models are not suitable for handling the complex tasks.
+• Cannot predict the correct output if the test data is different from the
+training dataset.
+• Training required lots of computation times.
+• We need enough knowledge about the classes of object.
+44
+"
+ML,Lecture3 Introduction to ML.pdf,42,Definition,What is the purpose of splitting the training dataset?,"Into training dataset, test dataset, and validation dataset","1.
+First Determine problem domain and the type of training dataset (text or multimedia)
+2.
+Collect/Gather the labelled training data.
+3.
+Split the training dataset into training dataset, test dataset, and validation dataset.
+4.
+Determine the input features of the training dataset, which should have enough
+knowledge so that the model can accurately predict the output.
+5.
+Determine the suitable algorithm for the model, such as support vector machine,
+decision tree, etc.
+6.
+Execute the algorithm on the training dataset. Sometimes we need validation sets as
+the control parameters, which are the subset of training datasets.
+7.
+Evaluate the accuracy of the model by providing the test set. If the model predicts
+the correct output, which means our model is accurate.
+42
+Steps Involved in Supervised Learning:
+"
+ML,Lecture3 Introduction to ML.pdf,42,Concept,What is the role of validation sets in the training process?,As control parameters to adjust the model's performance,"1.
+First Determine problem domain and the type of training dataset (text or multimedia)
+2.
+Collect/Gather the labelled training data.
+3.
+Split the training dataset into training dataset, test dataset, and validation dataset.
+4.
+Determine the input features of the training dataset, which should have enough
+knowledge so that the model can accurately predict the output.
+5.
+Determine the suitable algorithm for the model, such as support vector machine,
+decision tree, etc.
+6.
+Execute the algorithm on the training dataset. Sometimes we need validation sets as
+the control parameters, which are the subset of training datasets.
+7.
+Evaluate the accuracy of the model by providing the test set. If the model predicts
+the correct output, which means our model is accurate.
+42
+Steps Involved in Supervised Learning:
+"
+ML,Lecture3 Introduction to ML.pdf,42,Algorithm,What are some suitable algorithms for the model?,"Support vector machine, decision tree, etc.","1.
+First Determine problem domain and the type of training dataset (text or multimedia)
+2.
+Collect/Gather the labelled training data.
+3.
+Split the training dataset into training dataset, test dataset, and validation dataset.
+4.
+Determine the input features of the training dataset, which should have enough
+knowledge so that the model can accurately predict the output.
+5.
+Determine the suitable algorithm for the model, such as support vector machine,
+decision tree, etc.
+6.
+Execute the algorithm on the training dataset. Sometimes we need validation sets as
+the control parameters, which are the subset of training datasets.
+7.
+Evaluate the accuracy of the model by providing the test set. If the model predicts
+the correct output, which means our model is accurate.
+42
+Steps Involved in Supervised Learning:
+"
+ML,Lecture1.pdf,30,Definition,What is rational thinking?,Thinking that encodes knowledge in formal logical statements,"AI: Thinking vs. Acting Humanly
+Thinking Rationally?
+Approach to model how we should think (“rational thinking”). 
+This approach encodes the knowledge in a formal logical 
+statements.
+Applications: Playing a game will act rationally if it tries to win the game. 
+This is a problem that has greatly troubled AI researchers for years.
+Rationally do 
+the right thing
+"
+ML,Lecture1.pdf,30,Application,What is an example of acting rationally?,Trying to win a game,"AI: Thinking vs. Acting Humanly
+Thinking Rationally?
+Approach to model how we should think (“rational thinking”). 
+This approach encodes the knowledge in a formal logical 
+statements.
+Applications: Playing a game will act rationally if it tries to win the game. 
+This is a problem that has greatly troubled AI researchers for years.
+Rationally do 
+the right thing
+"
+ML,Lecture1.pdf,30,Concept,What is the problem that has troubled AI researchers?,Making a program act rationally,"AI: Thinking vs. Acting Humanly
+Thinking Rationally?
+Approach to model how we should think (“rational thinking”). 
+This approach encodes the knowledge in a formal logical 
+statements.
+Applications: Playing a game will act rationally if it tries to win the game. 
+This is a problem that has greatly troubled AI researchers for years.
+Rationally do 
+the right thing
+"
+ML,Lecture3 Introduction to ML.pdf,51,Definition,What is Clustering?,A method of grouping objects into clusters such that objects with most similarities remain in a group and have less or no similarities with the objects of another group.,"Un-Supervised Learning Algorithms
+The unsupervised learning algorithm can be further categorized
+into two types of problems:
+51
+Clustering is a method of grouping the objects
+into
+clusters
+such
+that
+objects
+with
+most
+similarities remains into a group and has less or
+no similarities with the objects of another group.
+Cluster
+analysis
+finds
+the
+commonalities
+between the data objects and categorizes them
+as per the presence and absence of those
+commonalities.
+An association rule is an unsupervised learning
+method which is used for finding the relationships
+between
+variables
+in
+the
+large
+database.
+It
+determines the set of items that occurs together in
+the
+dataset.
+Association
+rule
+makes
+marketing
+strategy more effective. Such as people who buy X
+item
+(bread)
+are
+also
+tend
+to
+purchase
+Y
+(Butter/Jam) item. A typical example of Association
+rule is Market Basket Analysis.
+51
+"
+ML,Lecture3 Introduction to ML.pdf,51,Application,What is the purpose of Association Rule?,To make marketing strategy more effective,"Un-Supervised Learning Algorithms
+The unsupervised learning algorithm can be further categorized
+into two types of problems:
+51
+Clustering is a method of grouping the objects
+into
+clusters
+such
+that
+objects
+with
+most
+similarities remains into a group and has less or
+no similarities with the objects of another group.
+Cluster
+analysis
+finds
+the
+commonalities
+between the data objects and categorizes them
+as per the presence and absence of those
+commonalities.
+An association rule is an unsupervised learning
+method which is used for finding the relationships
+between
+variables
+in
+the
+large
+database.
+It
+determines the set of items that occurs together in
+the
+dataset.
+Association
+rule
+makes
+marketing
+strategy more effective. Such as people who buy X
+item
+(bread)
+are
+also
+tend
+to
+purchase
+Y
+(Butter/Jam) item. A typical example of Association
+rule is Market Basket Analysis.
+51
+"
+ML,Lecture3 Introduction to ML.pdf,51,Definition,What is Cluster Analysis?,A process that finds the commonalities between data objects and categorizes them as per the presence and absence of those commonalities.,"Un-Supervised Learning Algorithms
+The unsupervised learning algorithm can be further categorized
+into two types of problems:
+51
+Clustering is a method of grouping the objects
+into
+clusters
+such
+that
+objects
+with
+most
+similarities remains into a group and has less or
+no similarities with the objects of another group.
+Cluster
+analysis
+finds
+the
+commonalities
+between the data objects and categorizes them
+as per the presence and absence of those
+commonalities.
+An association rule is an unsupervised learning
+method which is used for finding the relationships
+between
+variables
+in
+the
+large
+database.
+It
+determines the set of items that occurs together in
+the
+dataset.
+Association
+rule
+makes
+marketing
+strategy more effective. Such as people who buy X
+item
+(bread)
+are
+also
+tend
+to
+purchase
+Y
+(Butter/Jam) item. A typical example of Association
+rule is Market Basket Analysis.
+51
+"
+ML,Lecture9 SVM.pdf,15,Definition,What is α?,A coefficient,"= α1 * 2 + α2 * 4   + α3 * 4   = -1
+= α1 * 4 + α2 * 11 + α3 * 9   = +1
+= α1 * 4 + α2 * 9   + α3 * 11 = +1
+α1 = -3.5 ,         α2 = 0.75 ,           α3 = 0.75
+W = Σ αi * s i
+For all i= 1,2,3
+1X + 0Y -2 = 0 
+X = 2
+W = [ 1 0 ]
+Case Study I
+[1 0 1]T
+α1 * 
+* [1  0 1]
+[3 1 1]T
++α2 * 
+* [1  0 1]
++α3 * 
+[1 0 1]T
+α1 * 
+* [3  1 1]
+[3 1 1]T
++α2 * 
+* [3  1 1]
++α3 * 
+* [3  1 1] = +1
+[1 0 1]T
+α1 * 
+* [3 -1 1]
+[3 1 1]T
++α2 * 
+* [3 -1 1]
++α3 * 
+* [3 -1 1] = +1
+[3 -1 1]T
+[3 -1 1]T
+[3 -1 1]T
+[1 0 1]
+= α1 * 
++ α2 * 
++ α3 *     
+= [1 0 -2]  
+[3 1 1]
+[3 -1 1]  
+* [1  0 1] = - 1
+"
+ML,Lecture9 SVM.pdf,15,Definition,What is s i?,A scalar value,"= α1 * 2 + α2 * 4   + α3 * 4   = -1
+= α1 * 4 + α2 * 11 + α3 * 9   = +1
+= α1 * 4 + α2 * 9   + α3 * 11 = +1
+α1 = -3.5 ,         α2 = 0.75 ,           α3 = 0.75
+W = Σ αi * s i
+For all i= 1,2,3
+1X + 0Y -2 = 0 
+X = 2
+W = [ 1 0 ]
+Case Study I
+[1 0 1]T
+α1 * 
+* [1  0 1]
+[3 1 1]T
++α2 * 
+* [1  0 1]
++α3 * 
+[1 0 1]T
+α1 * 
+* [3  1 1]
+[3 1 1]T
++α2 * 
+* [3  1 1]
++α3 * 
+* [3  1 1] = +1
+[1 0 1]T
+α1 * 
+* [3 -1 1]
+[3 1 1]T
++α2 * 
+* [3 -1 1]
++α3 * 
+* [3 -1 1] = +1
+[3 -1 1]T
+[3 -1 1]T
+[3 -1 1]T
+[1 0 1]
+= α1 * 
++ α2 * 
++ α3 *     
+= [1 0 -2]  
+[3 1 1]
+[3 -1 1]  
+* [1  0 1] = - 1
+"
+ML,Lecture9 SVM.pdf,15,Definition,What is W?,A matrix,"= α1 * 2 + α2 * 4   + α3 * 4   = -1
+= α1 * 4 + α2 * 11 + α3 * 9   = +1
+= α1 * 4 + α2 * 9   + α3 * 11 = +1
+α1 = -3.5 ,         α2 = 0.75 ,           α3 = 0.75
+W = Σ αi * s i
+For all i= 1,2,3
+1X + 0Y -2 = 0 
+X = 2
+W = [ 1 0 ]
+Case Study I
+[1 0 1]T
+α1 * 
+* [1  0 1]
+[3 1 1]T
++α2 * 
+* [1  0 1]
++α3 * 
+[1 0 1]T
+α1 * 
+* [3  1 1]
+[3 1 1]T
++α2 * 
+* [3  1 1]
++α3 * 
+* [3  1 1] = +1
+[1 0 1]T
+α1 * 
+* [3 -1 1]
+[3 1 1]T
++α2 * 
+* [3 -1 1]
++α3 * 
+* [3 -1 1] = +1
+[3 -1 1]T
+[3 -1 1]T
+[3 -1 1]T
+[1 0 1]
+= α1 * 
++ α2 * 
++ α3 *     
+= [1 0 -2]  
+[3 1 1]
+[3 -1 1]  
+* [1  0 1] = - 1
+"
+ML,Lecture3 Introduction to ML.pdf,32,Definition,What is Veracity?,The trustworthiness and quality of the data,"•
+Volume
+Volume: Big data involves vast amounts of data generated from various
+sources, including sensors, social media, transaction records, etc....
+•
+Velocity
+Velocity: Big data is generated at high speeds and requires real-time or near-
+real-time processing to extract insights and value from it.
+•
+Variety
+Variety: Big data encompasses diverse types of data, including text, images,
+videos, sensor data, social media posts, and more, making it heterogeneous and
+complex to analyze.
+•
+Veracity
+Veracity: It refers to the trustworthiness and quality of the data. With such a
+high volume of data generated daily, it remains a challenge to ensure the data
+you work with is unbiased and correctly represents what it’s supposed to.
+•
+Value
+Value: Data on its own isn’t useful unless it is analyzed and transformed into
+meaningful
+insights
+that
+provide
+value
+to
+the
+business.
+For
+example,
+businesses use customer purchase data to create personalized marketing
+strategies or predict future buying behavior.
+32
+Characteristics
+"
+ML,Lecture3 Introduction to ML.pdf,32,Concept,What is the challenge with high volume of data?,Ensuring the data is unbiased and correctly represents what it’s supposed to,"•
+Volume
+Volume: Big data involves vast amounts of data generated from various
+sources, including sensors, social media, transaction records, etc....
+•
+Velocity
+Velocity: Big data is generated at high speeds and requires real-time or near-
+real-time processing to extract insights and value from it.
+•
+Variety
+Variety: Big data encompasses diverse types of data, including text, images,
+videos, sensor data, social media posts, and more, making it heterogeneous and
+complex to analyze.
+•
+Veracity
+Veracity: It refers to the trustworthiness and quality of the data. With such a
+high volume of data generated daily, it remains a challenge to ensure the data
+you work with is unbiased and correctly represents what it’s supposed to.
+•
+Value
+Value: Data on its own isn’t useful unless it is analyzed and transformed into
+meaningful
+insights
+that
+provide
+value
+to
+the
+business.
+For
+example,
+businesses use customer purchase data to create personalized marketing
+strategies or predict future buying behavior.
+32
+Characteristics
+"
+ML,Lecture3 Introduction to ML.pdf,32,Application,What is the purpose of analyzing data?,To create meaningful insights that provide value to the business,"•
+Volume
+Volume: Big data involves vast amounts of data generated from various
+sources, including sensors, social media, transaction records, etc....
+•
+Velocity
+Velocity: Big data is generated at high speeds and requires real-time or near-
+real-time processing to extract insights and value from it.
+•
+Variety
+Variety: Big data encompasses diverse types of data, including text, images,
+videos, sensor data, social media posts, and more, making it heterogeneous and
+complex to analyze.
+•
+Veracity
+Veracity: It refers to the trustworthiness and quality of the data. With such a
+high volume of data generated daily, it remains a challenge to ensure the data
+you work with is unbiased and correctly represents what it’s supposed to.
+•
+Value
+Value: Data on its own isn’t useful unless it is analyzed and transformed into
+meaningful
+insights
+that
+provide
+value
+to
+the
+business.
+For
+example,
+businesses use customer purchase data to create personalized marketing
+strategies or predict future buying behavior.
+32
+Characteristics
+"
+ML,Lecture4 Data  Data Manipulation.pdf,31,Definition,What is thematic analysis?,Manual analysis and interpretation of data,"Data Labeling (cont’d)
+Manual Approach
+Manual Approach
+The existing techniques mostly rely on manual analysis and interpretation of
+data.
+This manual analysis, also known as thematic
+thematic analysis
+analysis, involves at least three
+expert analysts (Labelers
+Labelers) who are intimately familiar with the data domain
+and serve as an interface between data and end-users.
+These manual approaches are 
+• Slow
+•
+labor-intensive
+•
+highly subjective
+•
+biased
+• impractical due to the huge volumes of available data.
+1
+"
+ML,Lecture4 Data  Data Manipulation.pdf,31,Concept,What is the manual approach in data labeling?,Existing techniques that rely on manual analysis and interpretation of data,"Data Labeling (cont’d)
+Manual Approach
+Manual Approach
+The existing techniques mostly rely on manual analysis and interpretation of
+data.
+This manual analysis, also known as thematic
+thematic analysis
+analysis, involves at least three
+expert analysts (Labelers
+Labelers) who are intimately familiar with the data domain
+and serve as an interface between data and end-users.
+These manual approaches are 
+• Slow
+•
+labor-intensive
+•
+highly subjective
+•
+biased
+• impractical due to the huge volumes of available data.
+1
+"
+ML,Lecture4 Data  Data Manipulation.pdf,31,Characteristics,What are the characteristics of manual approaches in data labeling?,"Slow, labor-intensive, highly subjective, biased, and impractical","Data Labeling (cont’d)
+Manual Approach
+Manual Approach
+The existing techniques mostly rely on manual analysis and interpretation of
+data.
+This manual analysis, also known as thematic
+thematic analysis
+analysis, involves at least three
+expert analysts (Labelers
+Labelers) who are intimately familiar with the data domain
+and serve as an interface between data and end-users.
+These manual approaches are 
+• Slow
+•
+labor-intensive
+•
+highly subjective
+•
+biased
+• impractical due to the huge volumes of available data.
+1
+"
+ML,Lecture1.pdf,31,Definition,What is a rational agent?,An agent that maximizes the expected value of their goal given what they currently know,"AI: Thinking vs. Acting Humanly
+Acting Rationally?
+The study of rational agents agents that maximize the expected value of
+their goal given what they currently know.
+Rational agents acts in a way to maximize their goals.
+Agent is anything that senses its environment and acts (able to execute actions) which
+can be
+1- Human,
+2- Robot, or
+3- Pure software.
+- Sensors
+
+eye
+/
+camera
+/ Listener to byte stream
+- Actuators 
+hand
+/
+motors
+/ ports-sockets
+AI is concerned with the production of intelligent agents (Agentic AI). So, do
+all agents are intelligent?
+Intelligent Agents are agents that can operate autonomously in complex
+environments.
+"
+ML,Lecture1.pdf,31,Definition,What is an intelligent agent?,An agent that can operate autonomously in complex environments,"AI: Thinking vs. Acting Humanly
+Acting Rationally?
+The study of rational agents agents that maximize the expected value of
+their goal given what they currently know.
+Rational agents acts in a way to maximize their goals.
+Agent is anything that senses its environment and acts (able to execute actions) which
+can be
+1- Human,
+2- Robot, or
+3- Pure software.
+- Sensors
+
+eye
+/
+camera
+/ Listener to byte stream
+- Actuators 
+hand
+/
+motors
+/ ports-sockets
+AI is concerned with the production of intelligent agents (Agentic AI). So, do
+all agents are intelligent?
+Intelligent Agents are agents that can operate autonomously in complex
+environments.
+"
+ML,Lecture1.pdf,31,Definition,What are actuators?,Components that enable an agent to execute actions,"AI: Thinking vs. Acting Humanly
+Acting Rationally?
+The study of rational agents agents that maximize the expected value of
+their goal given what they currently know.
+Rational agents acts in a way to maximize their goals.
+Agent is anything that senses its environment and acts (able to execute actions) which
+can be
+1- Human,
+2- Robot, or
+3- Pure software.
+- Sensors
+
+eye
+/
+camera
+/ Listener to byte stream
+- Actuators 
+hand
+/
+motors
+/ ports-sockets
+AI is concerned with the production of intelligent agents (Agentic AI). So, do
+all agents are intelligent?
+Intelligent Agents are agents that can operate autonomously in complex
+environments.
+"
